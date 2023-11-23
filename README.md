@@ -1,6 +1,6 @@
 # Photothèque de Chatons - Projet Symfony
 
-Bienvenue dans la photothèque de chatons, un projet Symfony développé dans le cadre du cours à l'EPSI. Cette application vous permettra de gérer et afficher une collection de photos adorables de chatons.
+Bienvenue dans la photothèque de chatons, un projet Symfony avec une BDD développé dans le cadre du cours à l'EPSI. Cette application vous permettra de gérer et afficher une collection de photos adorables de chatons.
 
 ## Configuration requise
 
