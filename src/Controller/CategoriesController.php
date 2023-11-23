@@ -13,10 +13,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class CategoriesController extends AbstractController
 {
     #[Route('/categories', name: 'app_categories')]
-    public function index(): Response
+    public function index(ManagerRegistry $registry): Response
     {
+        $repository = $registry->getRepository(Categorie::class);
+        $categories = $repository->findAll();
+
         return $this->render('categories/index.html.twig', [
-            'controller_name' => 'CategoriesController',
+            'categories' => $categories
         ]);
     }
     //action pour ajouter une categorie
