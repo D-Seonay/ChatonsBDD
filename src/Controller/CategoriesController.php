@@ -15,4 +15,12 @@ class CategoriesController extends AbstractController
             'controller_name' => 'CategoriesController',
         ]);
     }
+    //action pour ajouter une categorie
+    #[Route('/categories/ajouter', name: 'app_categories_ajouter')]
+    public function ajouter(): Response
+    {
+        return $this->render('categories/ajouter.html.twig', [
+            'controller_name' => 'CategoriesController',
+        ]);
+    }
 }
