@@ -20,8 +20,11 @@
                     <td>{{ categorie.description }}</td>
                     <td>
                         <a href="{{ path('app_categories_modifier', {'id': categorie.id}) }}" class="btn btn-secondary">Modifier</a>
+                        <a href="{{ path('app_categories_supprimer', {'id': categorie.id}) }}" class="btn btn-danger">Supprimer</a>
+                    </td>
                 </tr>
             {% endfor %}
+            <a href="{{ path('app_categories_ajouter') }}" class="btn btn-primary">Ajouter</a>
         </table>
 
 {% endblock %}

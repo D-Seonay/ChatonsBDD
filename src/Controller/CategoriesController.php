@@ -79,4 +79,19 @@ class CategoriesController extends AbstractController
             'formulaire' => $form->createView()
         ]);
     }
+    #[Route('/categories/supprimer/{id}', name: 'app_categories_supprimer')]
+    public function supprimer($id, ManagerRegistry $managerRegistry): Response
+    {
+        //création d'un formulaire
+        //on créé un objet de la classe Categorie
+        
+        $repository = $managerRegistry->getRepository(Categorie::class);
+        $categorie = $repository->find($id);
+        //on créé un formulaire en utilisant la méthode createForm()
+        $manager = $managerRegistry->getManager();
+        $manager->remove($categorie);
+        $manager->flush();
+        return $this->redirectToRoute('app_categories');
+    }
+    
 }
