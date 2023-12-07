@@ -14,7 +14,7 @@ class Chaton
     private ?int $id = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $nom = null;
+    private ?string $Nom = null;
 
     #[ORM\Column(length: 255)]
     private ?string $Photo = null;
@@ -30,12 +30,12 @@ class Chaton
 
     public function getNom(): ?string
     {
-        return $this->nom;
+        return $this->Nom;
     }
 
-    public function setNom(string $nom): static
+    public function setNom(string $Nom): static
     {
-        $this->nom = $nom;
+        $this->Nom = $Nom;
 
         return $this;
     }
