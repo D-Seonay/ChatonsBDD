@@ -17,7 +17,7 @@ class CategorieType extends AbstractType
             ->add('Description')
             ->add('Ajouter', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-primary',
+                    'class' => 'btn btn-secondary',
                 ]
             ])
         ;
