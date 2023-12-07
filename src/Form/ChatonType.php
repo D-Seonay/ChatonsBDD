@@ -15,7 +15,15 @@ class ChatonType extends AbstractType
         $builder
             ->add('nom')
             ->add('Photo')
-            ->add('Categorie')
+            ->add('Categorie', null, [
+                'choice_label' => 'Titre',
+                'expanded' => false,
+                'multiple' => false,
+                'placeholder' => 'Choisissez une catégorie',
+                'attr' => [
+                    'class' => 'form-select'
+                ]
+            ])
             ->add('Ajouter', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-secondary',
