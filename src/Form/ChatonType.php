@@ -14,7 +14,12 @@ class ChatonType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('Photo')
+            ->add('Photo', null, [
+                'label'=> 'Photo du chaton',
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
             ->add('Categorie', null, [
                 'choice_label' => 'Titre',
                 'expanded' => false,
