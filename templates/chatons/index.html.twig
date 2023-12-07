@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Photo</th>
+                <th>Categorie</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,10 +20,12 @@
             <tr>
                 <td>{{ chaton.id }}</td>
                 <td>{{ chaton.nom }}</td>
+                <td>{{ chaton.categorie.titre }}</td>
                 <td>{{ chaton.Photo }}</td>
                 <td>
-                    <a href="{{ path('app_chatons_show', {'id': chaton.id}) }}">show</a>
-                    <a href="{{ path('app_chatons_edit', {'id': chaton.id}) }}">edit</a>
+
+                    <a href="{{ path('app_chatons_show', {'id': chaton.id}) }}" class="btn btn-secondary">show</a>
+                    <a href="{{ path('app_chatons_edit', {'id': chaton.id}) }}" class="btn btn-danger">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +36,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_chatons_new') }}">Create new</a>
+    <a href="{{ path('app_chatons_new') }}" class="btn btn-secondary">Create new</a>
 {% endblock %}
