@@ -33,6 +33,11 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
 
    Votre application sera accessible à l'adresse [http://localhost:8000](http://localhost:8000).
 
+4. Faire la migration 
+   ```bash
+    symfony console doctrine:migrations:migrate
+   ```
+
 ## Auteurs
 
 - DELAUNAY Mathéo | Seonay
